@@ -9,4 +9,9 @@ RETURN type(r)
 
 match ()-[r]->() where id(r)=0 delete r
 
+return ()-[:Call]->() 生成调用关系
+
 https://neo4j.com/docs/cypher-manual/current/clauses/create/#create-create-a-node-with-multiple-labels
+
+
+https://medium.com/neo4j/hands-on-graph-data-visualization-bd1f055a492d 可视化展示
