@@ -7,4 +7,6 @@ WHERE a.name = 'A' AND b.name = 'B'
 CREATE (a)-[r:RELTYPE]->(b)
 RETURN type(r)
 
+match ()-[r]->() where id(r)=0 delete r
+
 https://neo4j.com/docs/cypher-manual/current/clauses/create/#create-create-a-node-with-multiple-labels
