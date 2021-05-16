@@ -1,0 +1,10 @@
+create (qr:service{name:"qr", qps:1000, order:"1.1.0"}),(ha3:service{name:"ha3",qps:3000, order:"1.1.1"}),(opendi:service{name:"opendi",qps:4000, order:"1.1.2"})
+
+MATCH
+  (a:Person),
+  (b:Person)
+WHERE a.name = 'A' AND b.name = 'B'
+CREATE (a)-[r:RELTYPE]->(b)
+RETURN type(r)
+
+https://neo4j.com/docs/cypher-manual/current/clauses/create/#create-create-a-node-with-multiple-labels
